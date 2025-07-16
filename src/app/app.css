@@ -1,0 +1,220 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--app-container-bg, linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%));
+  transition: all 0.3s ease;
+}
+
+/* Theme support */
+.theme-light {
+  --app-bg-primary: white;
+  --app-bg-secondary: #f8f9fa;
+  --app-text-primary: #333;
+  --app-text-secondary: #6c757d;
+  --app-border-color: #e9ecef;
+  --app-header-bg: white;
+  --app-container-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.theme-dark {
+  --app-bg-primary: #2d3748;
+  --app-bg-secondary: #4a5568;
+  --app-text-primary: #f7fafc;
+  --app-text-secondary: #a0aec0;
+  --app-border-color: #4a5568;
+  --app-header-bg: #1a202c;
+  --app-container-bg: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.app-header {
+  background: var(--app-header-bg, white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.theme-dark .app-header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.app-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-subtitle {
+  margin: 0 0 0.5rem 0;
+  color: var(--app-text-secondary, #6c757d);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.activity-indicator {
+  margin: 0 0 1rem 0;
+  color: #667eea;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  display: inline-block;
+}
+
+.theme-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.theme-btn,
+.language-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--app-bg-secondary, #f8f9fa);
+  color: var(--app-text-secondary, #495057);
+  border: 2px solid var(--app-border-color, #e9ecef);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.language-btn {
+  padding: 0.75rem 1rem;
+  font-size: 1.2rem;
+  min-width: 50px;
+}
+
+.theme-btn:hover,
+.language-btn:hover {
+  background: var(--app-border-color, #e9ecef);
+  transform: translateY(-1px);
+}
+
+.theme-dark .theme-btn,
+.theme-dark .language-btn {
+  background: var(--app-bg-secondary, #4a5568);
+  color: var(--app-text-primary, #f7fafc);
+  border-color: var(--app-border-color, #4a5568);
+}
+
+.theme-dark .theme-btn:hover,
+.theme-dark .language-btn:hover {
+  background: #5a6578;
+}
+
+.app-main {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.features-section {
+  max-width: 1200px;
+  margin: 4rem auto 2rem;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  color: var(--app-text-primary, #333);
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--app-bg-primary, white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-dark .feature-card {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.theme-dark .feature-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  margin: 0 0 1rem 0;
+  color: var(--app-text-primary, #333);
+  font-size: 1.3rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--app-text-secondary, #6c757d);
+  line-height: 1.6;
+}
+
+.app-footer {
+  background: var(--app-bg-primary, white);
+  border-top: 1px solid var(--app-border-color, #e9ecef);
+  margin-top: 3rem;
+  transition: all 0.3s ease;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--app-text-secondary, #6c757d);
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .header-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .features-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
