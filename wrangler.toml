@@ -1,0 +1,5 @@
+name = "taskmaster-app"
+compatibility_date = "2025-07-16"
+
+[site]
+bucket = "./dist/taskmaster-app/browser"

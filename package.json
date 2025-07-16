@@ -6,9 +6,8 @@
     "start": "ng serve",
     "build": "ng build --configuration production",
     "build:static": "ng build --configuration production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:taskmaster-app": "node dist/taskmaster-app/server/server.mjs"
+    "build:pages": "ng build --configuration production",
+    "deploy": "npm run build:pages && wrangler deploy"
   },
   "prettier": {
     "overrides": [

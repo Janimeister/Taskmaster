@@ -41,12 +41,22 @@ The built files will be in the `dist/taskmaster-app/browser` directory.
 
 ## Deployment to Cloudflare Pages
 
-1. **Connect your repository** to Cloudflare Pages
-2. **Set build settings**:
+There are two ways to deploy:
+
+1. **Using Cloudflare Pages UI**:
    - Build command: `npm run build:static`
    - Build output directory: `dist/taskmaster-app/browser`
    - Root directory: `/` (leave empty)
-3. **Deploy**!
+
+2. **Using Wrangler CLI**:
+   ```bash
+   npm install -g wrangler
+   npm run deploy
+   ```
+
+This will:
+1. Build your application
+2. Deploy it to Cloudflare Pages
 
 ### Data Storage
 
