@@ -1,5 +1,7 @@
 name = "taskmaster-app"
 compatibility_date = "2025-07-16"
+main = "./dist/taskmaster-app/browser/index.html"
 
 [site]
 bucket = "./dist/taskmaster-app/browser"
+entry-point = "workers-site"
