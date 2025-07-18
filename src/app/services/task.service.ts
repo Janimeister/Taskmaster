@@ -12,75 +12,183 @@ export class TaskService {
   private readonly defaultTasks: Task[] = [
     {
       id: '1',
-      title: 'Setup Development Environment',
-      description: 'Install Node.js, npm, and your preferred code editor',
-      category: 'Setup'
+      title: 'Kerro kumpi pärjäisi paremmin zombiapocalypsessä - Veera vai Jani. Perustele',
+      description: 'Kerro kumpi pärjäisi paremmin zombiapocalypsessä - Veera vai Jani. Perustele',
+      category: 'Synttärijuhlat'
     },
     {
       id: '2',
-      title: 'Learn TypeScript Basics',
-      description: 'Understand types, interfaces, and basic TypeScript syntax',
-      category: 'Learning'
+      title: 'Kerro sankareista hauska/lempi yhteismuisto',
+      description: 'Kerro sankareista hauska/lempi yhteismuisto',
+      category: 'Synttärijuhlat'
     },
     {
       id: '3',
-      title: 'Create First Component',
-      description: 'Build your first Angular component with template and styles',
-      category: 'Development'
+      title: 'Kirjoita onnitteluruno',
+      description: 'Kirjoita onnitteluruno',
+      category: 'Synttärijuhlat'
     },
     {
       id: '4',
-      title: 'Implement Data Binding',
-      description: 'Practice property binding, event binding, and two-way binding',
-      category: 'Development'
+      title: 'Löydä tonttu Veeran ja Janin kotoa',
+      description: 'Löydä tonttu Veeran ja Janin kotoa',
+      category: 'Synttärijuhlat'
     },
     {
       id: '5',
-      title: 'Add Routing',
-      description: 'Set up Angular Router and create navigation between pages',
-      category: 'Development'
+      title: 'Voita pöytäfutiksessa',
+      description: 'Voita pöytäfutiksessa',
+      category: 'Synttärijuhlat'
     },
     {
       id: '6',
-      title: 'Work with Services',
-      description: 'Create a service and inject it into components',
-      category: 'Development'
+      title: 'Taittele lautasliinasta origami',
+      description: 'Taittele lautasliinasta origami',
+      category: 'Synttärijuhlat'
     },
     {
       id: '7',
-      title: 'Handle Forms',
-      description: 'Implement reactive forms with validation',
-      category: 'Development'
+      title: 'Suostuttele tuntematon ihminen onnittelemaan sankareita',
+      description: 'Suostuttele tuntematon ihminen onnittelemaan sankareita',
+      category: 'Synttärijuhlat'
     },
     {
       id: '8',
-      title: 'Style Components',
-      description: 'Add CSS styling and make components responsive',
-      category: 'Design'
+      title: 'Ota kuva kaikista juhlijoista',
+      description: 'Ota kuva kaikista juhlijoista',
+      category: 'Synttärijuhlat'
     },
     {
       id: '9',
-      title: 'Add HTTP Client',
-      description: 'Make API calls using Angular HttpClient',
-      category: 'Development'
+      title: 'Soita sankareiden lemibiisi ja tanssi',
+      description: 'Soita sankareiden lemibiisi ja tanssi',
+      category: 'Synttärijuhlat'
     },
     {
       id: '10',
-      title: 'Write Unit Tests',
-      description: 'Create unit tests for your components and services',
-      category: 'Testing'
+      title: 'Piirrä muotokuva yhdestä sankareista',
+      description: 'Piirrä muotokuva yhdestä sankareista',
+      category: 'Synttärijuhlat'
     },
     {
       id: '11',
-      title: 'Optimize Performance',
-      description: 'Implement lazy loading and OnPush change detection',
-      category: 'Optimization'
+      title: 'Pikkujekku',
+      description: 'Pikkujekku',
+      category: 'Synttärijuhlat'
     },
     {
       id: '12',
-      title: 'Deploy Application',
-      description: 'Build and deploy your application to a hosting platform',
-      category: 'Deployment'
+      title: 'Kommentoi toisten sanomiin asioihin "voi pojat".',
+      description: 'Kommentoi toisten sanomiin asioihin "voi pojat".',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '13',
+      title: 'Kerro yksi hauska fakta itsestäsi jollekin, joka ei sitä tiedä',
+      description: 'Kerro yksi hauska fakta itsestäsi jollekin, joka ei sitä tiedä',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '14',
+      title: 'Selvitä kolmelta vieraalta, mitkä ovat heidän lempi Disney-elokuvansa / Pokemoninsa',
+      description: 'Selvitä kolmelta vieraalta, mitkä ovat heidän lempi Disney-elokuvansa / Pokemoninsa',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '15',
+      title: 'Esitä tunnettu mainos tai elokuvarepliikki',
+      description: 'Esitä tunnettu mainos tai elokuvarepliikki',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '16',
+      title: 'Etsi vieras, jolla on sama kengännumero kuin sinulla',
+      description: 'Etsi vieras, jolla on sama kengännumero kuin sinulla',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '17',
+      title: 'Etsi kaksi muuta, joilla on synttärit samana kuukautena kuin sinulla.',
+      description: 'Etsi kaksi muuta, joilla on synttärit samana kuukautena kuin sinulla.',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '18',
+      title: 'Selvitä Uuden Saunan omistajan etunimi (ilman googlea)',
+      description: 'Selvitä Uuden Saunan omistajan etunimi (ilman googlea)',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '19',
+      title: 'Ota salaselfie vieruskaverin kanssa (siten ettei hän huomaa)',
+      description: 'Ota salaselfie vieruskaverin kanssa (siten ettei hän huomaa)',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '20',
+      title: 'Muistele milloin tapasit sankarit ensimmäisen kerran ja millainen kohtaaminen oli',
+      description: 'Muistele milloin tapasit sankarit ensimmäisen kerran ja millainen kohtaaminen oli',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '21',
+      title: 'Jaa paras neuvo 30:selle',
+      description: 'Jaa paras neuvo 30:selle',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '22',
+      title: 'Laula onnittelulaulu sankareille julkisella paikalla',
+      description: 'Laula onnittelulaulu sankareille julkisella paikalla',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '23',
+      title: 'Ryömi pöydän ali',
+      description: 'Ryömi pöydän ali',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '24',
+      title: 'Lennätä paperilennokkia vähintään 5 metriä',
+      description: 'Lennätä paperilennokkia vähintään 5 metriä',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '25',
+      title: 'Nimeä oikein kaikki talon viherkasvit',
+      description: 'Nimeä oikein kaikki talon viherkasvit',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '26',
+      title: 'Kerro vitsi, joka saa koko saunaporukan nauramaan',
+      description: 'Kerro vitsi, joka saa koko saunaporukan nauramaan',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '27',
+      title: 'Välivesi',
+      description: 'Välivesi',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '28',
+      title: 'Käy viilentävässä vesikylvyssä saunan jälkeen',
+      description: 'Käy viilentävässä vesikylvyssä saunan jälkeen',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '29',
+      title: 'Ole viimeinen synttäriporukasta, joka poistuu lauteilta (sillä hetkellä)',
+      description: 'Ole viimeinen synttäriporukasta, joka poistuu lauteilta (sillä hetkellä)',
+      category: 'Synttärijuhlat'
+    },
+    {
+      id: '30',
+      title: 'Kehu kaveria',
+      description: 'Kehu kaveria',
+      category: 'Synttärijuhlat'
     }
   ];
 

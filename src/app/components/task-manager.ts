@@ -647,7 +647,7 @@ export class TaskManagerComponent {
   
   // Input signals for configuration - makes component highly reusable
   readonly theme = input<'light' | 'dark'>('light');
-  readonly maxTasks = input<number>(10);
+  readonly maxTasks = input<number>(30);
   readonly showCelebration = input<boolean>(true);
   readonly autoFocus = input<boolean>(true);
   readonly taskTitle = input<string>('📝 Development Tasks');
@@ -675,20 +675,40 @@ export class TaskManagerComponent {
   });
   
   tasks = signal<Task[]>([
-    { id: 1, title: 'Setup development environment', completed: false, points: 10 },
-    { id: 2, title: 'Learn TypeScript fundamentals', completed: false, points: 20 },
-    { id: 3, title: 'Master Angular components and services', completed: false, points: 30 },
-    { id: 4, title: 'Implement responsive design patterns', completed: false, points: 25 },
-    { id: 5, title: 'Add user authentication and data persistence', completed: false, points: 35 },
-    { id: 6, title: 'Create interactive user interfaces', completed: false, points: 40 },
-    { id: 7, title: 'Optimize performance and bundle size', completed: false, points: 50 },
-    { id: 8, title: 'Write comprehensive tests', completed: false, points: 45 },
-    { id: 9, title: 'Setup CI/CD pipeline', completed: false, points: 55 },
-    { id: 10, title: 'Deploy to production (Cloudflare Pages)', completed: false, points: 60 }
+    { id: 1, title: 'Kerro kumpi pärjäisi paremmin zombiapocalypsessä - Veera vai Jani. Perustele', completed: false, points: 2 },
+    { id: 2, title: 'Kerro sankareista hauska/lempi yhteismuisto', completed: false, points: 3 },
+    { id: 3, title: 'Kirjoita onnitteluruno', completed: false, points: 3 },
+    { id: 4, title: 'Löydä tonttu Veeran ja Janin kotoa', completed: false, points: 5 },
+    { id: 5, title: 'Voita pöytäfutiksessa', completed: false, points: 3 },
+    { id: 6, title: 'Taittele lautasliinasta origami', completed: false, points: 2 },
+    { id: 7, title: 'Suostuttele tuntematon ihminen onnittelemaan sankareita', completed: false, points: 5 },
+    { id: 8, title: 'Ota kuva kaikista juhlijoista', completed: false, points: 2 },
+    { id: 9, title: 'Soita sankareiden lemibiisi ja tanssi', completed: false, points: 2 },
+    { id: 10, title: 'Piirrä muotokuva yhdestä sankareista', completed: false, points: 4 },
+    { id: 11, title: 'Pikkujekku', completed: false, points: 1 },
+    { id: 12, title: 'Kommentoi toisten sanomiin asioihin "voi pojat".', completed: false, points: 2 },
+    { id: 13, title: 'Kerro yksi hauska fakta itsestäsi jollekin, joka ei sitä tiedä', completed: false, points: 2 },
+    { id: 14, title: 'Selvitä kolmelta vieraalta, mitkä ovat heidän lempi Disney-elokuvansa / Pokemoninsa', completed: false, points: 3 },
+    { id: 15, title: 'Esitä tunnettu mainos tai elokuvarepliikki', completed: false, points: 1 },
+    { id: 16, title: 'Etsi vieras, jolla on sama kengännumero kuin sinulla', completed: false, points: 3 },
+    { id: 17, title: 'Etsi kaksi muuta, joilla on synttärit samana kuukautena kuin sinulla.', completed: false, points: 2 },
+    { id: 18, title: 'Selvitä Uuden Saunan omistajan etunimi (ilman googlea)', completed: false, points: 5 },
+    { id: 19, title: 'Ota salaselfie vieruskaverin kanssa (siten ettei hän huomaa)', completed: false, points: 3 },
+    { id: 20, title: 'Muistele milloin tapasit sankarit ensimmäisen kerran ja millainen kohtaaminen oli', completed: false, points: 2 },
+    { id: 21, title: 'Jaa paras neuvo 30:selle', completed: false, points: 1 },
+    { id: 22, title: 'Laula onnittelulaulu sankareille julkisella paikalla', completed: false, points: 5 },
+    { id: 23, title: 'Ryömi pöydän ali', completed: false, points: 3 },
+    { id: 24, title: 'Lennätä paperilennokkia vähintään 5 metriä', completed: false, points: 2 },
+    { id: 25, title: 'Nimeä oikein kaikki talon viherkasvit', completed: false, points: 5 },
+    { id: 26, title: 'Kerro vitsi, joka saa koko saunaporukan nauramaan', completed: false, points: 2 },
+    { id: 27, title: 'Välivesi', completed: false, points: 1 },
+    { id: 28, title: 'Käy viilentävässä vesikylvyssä saunan jälkeen', completed: false, points: 4 },
+    { id: 29, title: 'Ole viimeinen synttäriporukasta, joka poistuu lauteilta (sillä hetkellä)', completed: false, points: 4 },
+    { id: 30, title: 'Kehu kaveria', completed: false, points: 1 }
   ]);
 
   // Computed signals with configuration support
-  filteredTasks = computed(() => this.tasks().slice(0, this.maxTasks()));
+  filteredTasks = computed(() => this.tasks());
   completedCount = computed(() => this.filteredTasks().filter(task => task.completed).length);
   totalPoints = computed(() => this.filteredTasks().reduce((sum, task) => sum + task.points, 0));
   earnedPoints = computed(() => this.filteredTasks().filter(task => task.completed)
@@ -737,7 +757,7 @@ export class TaskManagerComponent {
         statusIncomplete: 'Incomplete',
         
         // Tasks
-        developmentTasks: 'Development Tasks'
+        developmentTasks: 'Tasks'
       },
       fi: {
         // Login section
@@ -770,7 +790,7 @@ export class TaskManagerComponent {
         statusIncomplete: 'Kesken',
         
         // Tasks
-        developmentTasks: 'Kehitystehtävät'
+        developmentTasks: 'Tehtävät'
       }
     };
     return translations[language];
