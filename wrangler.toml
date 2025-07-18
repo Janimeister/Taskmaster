@@ -1,4 +1,4 @@
-name = "taskmaster-app"
+name = "taskmaster"
 compatibility_date = "2025-07-16"
 main = "workers-site/index.js"
 
